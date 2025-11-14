@@ -5,7 +5,7 @@ export default function Cabecalho(){
     return(
         <header>
             <h1>GIG - Trust</h1>   
-            <Menu> 
+            <Menu/> 
         </header>
     )
     
