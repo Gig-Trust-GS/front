@@ -1,16 +1,7 @@
-import { Outlet } from "react-router-dom";
-import Cabecalho from "./components/Cabecalho/Cabecalho";
-import Rodape from "./components/Rodape/Rodape";
+import React from 'react';
 
-function App() {
+const App: React.FC = () = {
+  return <React.Fragment />;
+};
 
-  return (
-    <>
-      <Cabecalho />
-      <Outlet />
-      <Rodape />       
-    </>
-  )
-}
-
-export default App
+export default App;
