@@ -15,7 +15,7 @@ import Dashboard from './routes/Dashboard';
 import Conexoes from './routes/Conexoes';
 import Reskilling from './routes/Reskilling';
 import AvaliarTrabalhador from './routes/AvaliarTrabalhador';
-import Perfil from './routes/Perfil'; // Rota de Perfil
+import Perfil from './routes/Perfil';
 
 const router = createBrowserRouter([
 

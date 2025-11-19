@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { LogIn, Menu, X, ArrowRight, User } from 'lucide-react';
-import Logo from './assets/img/gig-trust-logo.png'; 
+import Logo from '../public/gig-trust-logo.png';
 
 // Componente de Rodapé Público
 const PublicFooter: React.FC = () => (

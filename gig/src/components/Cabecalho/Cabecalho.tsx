@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { LogOut, LayoutDashboard, Zap, User } from 'lucide-react';
-import Logo from '../../assets/img/gig-trust-logo.png';
+import Logo from '../../../public/gig-trust-logo.png';
 
 const Cabecalho: React.FC = () => {
     const navigate = useNavigate();
