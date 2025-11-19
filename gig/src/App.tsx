@@ -1,7 +1,7 @@
 import React from 'react';
 
-const App: React.FC = () = {
-  return <React.Fragment />;
+const App: React.FC = () => {
+    return <React.Fragment />; 
 };
 
 export default App;
