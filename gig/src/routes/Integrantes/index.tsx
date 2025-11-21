@@ -13,7 +13,7 @@ interface Integrante {
   linkedinUrl: string;
 }
 
-// DADOS FINAIS DA EQUIPE
+// DADOS DA EQUIPE
 const integrantes: Integrante[] = [
   {
     nome: "Matheus Borges Sansão Silva",
@@ -53,7 +53,7 @@ const Integrantes: React.FC = () => {
             Nossa <span className="text-green-400">Equipe</span>
           </h1>
           <p className="text-lg text-gray-400 mt-2">
-            Desenvolvedores do Passaporte de Carreira Gig-Trust | Turma *1TDSPO*.
+            Desenvolvedores do Passaporte de Carreira Gig-Trust | Turma **1TDSPO**.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ const Integrantes: React.FC = () => {
               className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-blue-400/30 shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-blue-500/50">
               <div className="text-center">
 
-                <img src={integrante.fotoUrl} alt={Foto de ${integrante.nome}} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-400 p-0.5" />
+                <img src={integrante.fotoUrl} alt={`Foto de ${integrante.nome}`} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-400 p-0.5" />
 
                 <h2 className="text-xl font-bold mb-1 text-white">
                   {integrante.nome}

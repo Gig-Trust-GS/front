@@ -13,12 +13,12 @@ const faqData: FAQItem[] = [
     {
         id: 1,
         pergunta: "O que é o Score de Estabilidade de Renda e qual IA o calcula?",
-        resposta: "O Score é a métrica principal do Gig-Trust. Ele é calculado por um modelo de *Inteligência Artificial (Regressão Linear)* que analisa seu histórico de ganhos, sazonalidade, reputação e frequência de trabalho. Este número resolve a dificuldade de comprovar renda para instituições financeiras, aluguel de imóveis ou acesso a crédito."
+        resposta: "O Score é a métrica principal do Gig-Trust. Ele é calculado por um modelo de **Inteligência Artificial (Regressão Linear)** que analisa seu histórico de ganhos, sazonalidade, reputação e frequência de trabalho. Este número resolve a dificuldade de comprovar renda para instituições financeiras, aluguel de imóveis ou acesso a crédito."
     },
     {
         id: 2,
         pergunta: "Como o Mapa de Competências é gerado e qual a IA envolvida?",
-        resposta: "O Mapa é gerado por um segundo modelo de IA (*Agrupamento e Processamento de Linguagem Natural - NLP*). Ele analisa avaliações de clientes e padrões de trabalho para 'traduzir' experiências em habilidades transferíveis (ex: 'Gestão de Tempo', 'Logística'). É essencial para o Reskilling, pois revela as competências do trabalhador."
+        resposta: "O Mapa é gerado por um segundo modelo de IA (**Agrupamento e Processamento de Linguagem Natural - NLP**). Ele analisa avaliações de clientes e padrões de trabalho para 'traduzir' experiências em habilidades transferíveis (ex: 'Gestão de Tempo', 'Logística'). É essencial para o Reskilling, pois revela as competências do trabalhador."
     },
     {
         id: 3,
@@ -33,12 +33,12 @@ const faqData: FAQItem[] = [
     {
         id: 5,
         pergunta: "Quais são as tabelas mínimas do banco de dados (Oracle) para suportar a solução?",
-        resposta: "O modelo de dados mínimo exige 4 tabelas. As principais entidades são: *TB_TRABALHADOR* (dados cadastrais), *TB_CONEXAO_PLATAFORMA* (para integrar com Uber/iFood), *TB_REGISTRO_GIG* (dados brutos de trabalho/avaliações) e *TB_SCORE_RENDA* (onde o resultado da IA é salvo e consultado)."
+        resposta: "O modelo de dados mínimo exige 4 tabelas. As principais entidades são: **TB_TRABALHADOR** (dados cadastrais), **TB_CONEXAO_PLATAFORMA** (para integrar com Uber/iFood), **TB_REGISTRO_GIG** (dados brutos de trabalho/avaliações) e **TB_SCORE_RENDA** (onde o resultado da IA é salvo e consultado)."
     },
     {
         id: 6,
         pergunta: "O Front-End (React) se comunica diretamente com o banco de dados?",
-        resposta: "Não. O Front-End usa o *Domain Driven Design (DDD)* e se comunica via *API Restful (Java/Quarkus)*. O backend em Java é responsável por buscar os dados no banco (Oracle) e consultar os resultados do modelo de IA (Python), entregando ao React apenas o Score e o Mapa prontos para exibição."
+        resposta: "Não. O Front-End usa o **Domain Driven Design (DDD)** e se comunica via **API Restful (Java/Quarkus)**. O backend em Java é responsável por buscar os dados no banco (Oracle) e consultar os resultados do modelo de IA (Python), entregando ao React apenas o Score e o Mapa prontos para exibição."
     }
 ];
 
@@ -52,7 +52,7 @@ const Acordeao: React.FC<FAQItem> = ({ pergunta, resposta }) => {
                 {isOpen ? <ChevronUp size={24} className="text-blue-400" /> : <ChevronDown size={24} className="text-gray-400" />}
             </button>
 
-            <div className={overflow-hidden transition-all duration-500 ease-in-out ${ isOpen ? 'max-h-96 opacity-100 py-3' : 'max-h-0 opacity-0'}}>
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${ isOpen ? 'max-h-96 opacity-100 py-3' : 'max-h-0 opacity-0'}`}>
                 <p className="text-gray-300 pb-4 text-base">
                     {resposta}
                 </p>

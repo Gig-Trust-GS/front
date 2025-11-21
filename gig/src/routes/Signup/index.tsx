@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Calendar, Home as HomeIcon, Send, Loader2, ArrowLeft } from 'lucide-react'; 
 import axios from 'axios';
 
-import Logo from '../../assets/img/gig-trust-logo.png'; 
+import Logo from '../../../public/gig-trust-logo.png'; 
 
 const API_BASE_URL = 'https://gig-java.onrender.com/usuario'; 
 
