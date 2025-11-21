@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Award, Zap, TrendingUp, DollarSign, Target, Briefcase, Star, Loader2 } from 'lucide-react';
+import { Award, TrendingUp, DollarSign, Target, Briefcase, Star, Loader2 } from 'lucide-react';
 
-const API_BASE_URL = 'https://gig-java.onrender.com/trabalhador';
+//const API_BASE_URL = 'https://gig-java.onrender.com/trabalhador';
 
 interface Competencia { nome: string; nivel: number; descricao: string; }
 interface DashboardData {

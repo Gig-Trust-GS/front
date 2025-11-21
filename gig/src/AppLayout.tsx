@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Outlet, useLocation, Link } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Cabecalho from './components/Cabecalho/Cabecalho';
 import Rodape from './components/Rodape/Rodape';
-import { LayoutDashboard, Zap, User, Briefcase, ChevronRight } from 'lucide-react';
+//import { LayoutDashboard, Zap, User, Briefcase, ChevronRight } from 'lucide-react';
 
 const AppLayout: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,11 +16,11 @@ const AppLayout: React.FC = () => {
         setIsMenuOpen(prev => !prev);
     };
 
-    const getLinkClassMobile = (path: string) => {
-        const isActive = location.pathname === path;
-        return `flex items-center justify-between px-6 py-4 text-white font-medium hover:bg-gray-800 transition ${isActive ? 'bg-gray-800 text-green-400 border-l-4 border-green-400' : 'text-gray-300'
-            }`;
-    };
+    // const getLinkClassMobile = (path: string) => {
+    //     const isActive = location.pathname === path;
+    //     return `flex items-center justify-between px-6 py-4 text-white font-medium hover:bg-gray-800 transition ${isActive ? 'bg-gray-800 text-green-400 border-l-4 border-green-400' : 'text-gray-300'
+    //         }`;
+    // };
 
     return (
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Star, User, MessageSquare, Send, Loader2, Search, Zap } from 'lucide-react';
+import { Star, MessageSquare, Send, Loader2, Search, Zap } from 'lucide-react';
 
 const API_BASE_URL = 'https://gig-java.onrender.com/avaliacao';
 
@@ -31,7 +31,7 @@ const AvaliarTrabalhador: React.FC = () => {
     const [success, setSuccess] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     const filteredTrabalhadores = trabalhadoresMock.filter(worker =>
         worker.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||

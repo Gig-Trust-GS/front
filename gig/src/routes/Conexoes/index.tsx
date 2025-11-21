@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+//import { useNavigate } from 'react-router-dom';
 import { PlusCircle, Trash2, Link as LinkIcon, Zap, Loader2, XCircle } from 'lucide-react'; 
 
-const API_BASE_URL = 'https://gig-java.onrender.com/trabalhador'; 
+//const API_BASE_URL = 'https://gig-java.onrender.com/trabalhador'; 
 
 interface Conexao {
     id: number;
@@ -26,8 +26,8 @@ const Conexoes: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [plataformaNova, setPlataformaNova] = useState('');
 
-    const navigate = useNavigate();
-    const userId = "mock-user-id";
+    //const navigate = useNavigate();
+    //const userId = "mock-user-id";
 
     const handleAddConexao = (e: React.FormEvent) => {
         e.preventDefault();
