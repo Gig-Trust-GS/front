@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import { Star, MessageSquare, Send, Loader2, Search, Zap } from 'lucide-react';
 
 const API_BASE_URL = 'https://gig-java.onrender.com/avaliacao';
