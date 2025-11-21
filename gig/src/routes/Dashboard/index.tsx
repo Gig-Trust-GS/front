@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Award, Zap, TrendingUp, DollarSign, Target, Briefcase, Star, Loader2 } from 'lucide-react';
-import axios from 'axios';
 
 const API_BASE_URL = 'https://gig-java.onrender.com/trabalhador';
 

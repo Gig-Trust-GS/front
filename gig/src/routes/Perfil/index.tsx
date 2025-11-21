@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { User, Mail, Lock, Calendar, Home as HomeIcon, Save, Loader2, ArrowRight } from 'lucide-react';
-import axios from 'axios';
 
 const API_BASE_URL = 'https://gig-java.onrender.com/usuario'; 
 
@@ -98,15 +97,23 @@ const Perfil: React.FC = () => {
         };
 
         try {
-            const response = await axios.put(API_BASE_URL, requestBody);
+            const response = await fetch(API_BASE_URL, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            });
             
-            if (response.status === 202) { 
+            if (response.status === 202) {
                 setSuccess('Perfil atualizado com sucesso!');
                 setSenha(''); 
+            } else {
+                 setError(`Falha ao editar o perfil. Erro: ${response.status} ${response.statusText}`);
             }
 
         } catch (err) {
-            setError(`Falha ao editar o perfil. Erro: ${axios.isAxiosError(err) ? err.response?.status : 'Rede'}`);
+            setError(`Falha ao editar o perfil. Erro de Rede.`);
             console.error("Erro na edição do perfil:", err);
         } finally {
             setLoading(false);

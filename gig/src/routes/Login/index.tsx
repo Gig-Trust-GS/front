@@ -1,7 +1,6 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Lock, EyeOff, Eye, ArrowLeft, Loader2 } from 'lucide-react'; 
-import axios from 'axios'; 
 import Logo from '../../../public/gig-trust-logo.png'; 
 
 const API_BASE_URL = 'https://gig-java.onrender.com/usuario'; 
@@ -39,11 +38,11 @@ const Login: React.FC = () => {
 
     try {
       const url = `${API_BASE_URL}/validar/${cpfParaApi}/${senha}`;
-      const response = await axios.get(url);
+      const response = await fetch(url); // Chamada GET com fetch
       
-      if (response.status === 200) {
-        
-        const userObject = response.data || {};
+      if (response.ok) { // Verifica se o status está na faixa 200-299
+        // A API de login retorna 200 com os dados do usuário no body
+        const userObject = await response.json();
         const userCpf = userObject.cpf || userObject.cpf_usuario || cpfParaApi; 
         
         localStorage.setItem('user_data', JSON.stringify({
@@ -53,14 +52,14 @@ const Login: React.FC = () => {
         })); 
         
         navigate('/dashboard'); 
+      } else {
+         // Trata erros como 404 (não encontrado) ou 400 (dados inválidos)
+         setError('CPF ou Senha incorretos.');
       }
       
     } catch (err) {
-      if (axios.isAxiosError(err) && err.response && (err.response.status === 404 || err.response.status === 400)) {
-        setError('CPF ou Senha incorretos.');
-      } else {
-        setError('Erro de conexão com a API.');
-      }
+      // Trata erros de rede
+      setError('Erro de conexão com a API.');
     } finally {
       setLoading(false);
     }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Star, User, MessageSquare, Send, Loader2, Search, Zap } from 'lucide-react';
-import axios from 'axios';
 
 const API_BASE_URL = 'https://gig-java.onrender.com/avaliacao';
 
@@ -73,20 +72,24 @@ const AvaliarTrabalhador: React.FC = () => {
                 avaliado: { cpf_usuario: cpfAvaliadoApi }
             };
 
-            const response = await axios.post(API_BASE_URL, requestBody);
+            const response = await fetch(API_BASE_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            });
 
             if (response.status === 201) {
                 setSuccess('Avaliação enviada com sucesso!');
                 setCpfAvaliado('');
                 setComentario('');
+            } else {
+                 setError(`Erro ${response.status}: Verifique se o CPF do Trabalhador Gig existe no banco.`);
             }
 
         } catch (err) {
-            if (axios.isAxiosError(err) && err.response) {
-                setError(`Erro ${err.response.status}: Verifique se o CPF do Trabalhador Gig existe no banco.`);
-            } else {
-                setError('Erro de rede.');
-            }
+            setError('Erro de rede.');
         } finally {
             setLoading(false);
         }
@@ -99,7 +102,7 @@ const AvaliarTrabalhador: React.FC = () => {
                     Avaliar <span className="text-blue-400">Trabalhador Gig</span>
                 </h1>
 
-                <div className="bg-gray-900 p-4 rounded-lg mb-6 border border-yellow-400/50">
+                <div className="bg-blue-900/40 p-4 rounded-lg mb-6 border border-yellow-400/50">
                     <p className="text-sm text-gray-300">
                         Você está avaliando como: <span className="font-semibold text-white">{cpfAvaliadorDisplay || "CPF NÃO ENCONTRADO"}</span>
                     </p>

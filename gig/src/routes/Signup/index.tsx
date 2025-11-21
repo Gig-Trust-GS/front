@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { User, Mail, Lock, Calendar, Home as HomeIcon, Send, Loader2, ArrowLeft } from 'lucide-react'; 
-import axios from 'axios';
+import { User, Mail, Lock, Calendar, Home as HomeIcon, Loader2, ArrowLeft } from 'lucide-react'; 
 
 import Logo from '../../../public/gig-trust-logo.png'; 
 
@@ -48,19 +47,26 @@ const Signup: React.FC = () => {
                 senha: senha,
             };
 
-            const response = await axios.post(API_BASE_URL, requestBody);
+            const response = await fetch(API_BASE_URL, { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            });
             
-            if (response.status === 201) {
+            if (response.status === 201) { 
                 alert('Cadastro realizado com sucesso! Faça login.');
                 navigate('/login'); 
+            } else if (response.status === 400) {
+                 setError('O usuário já existe ou dados estão inválidos (Erro 400).');
             }
+             else {
+                 setError(`Erro ${response.status}: Falha no cadastro. Verifique os dados.`);
+             }
             
         } catch (err) {
-            if (axios.isAxiosError(err) && err.response && err.response.status === 400) {
-                setError('O usuário já existe ou dados estão inválidos (Erro 400).');
-            } else {
-                setError('Erro ao conectar com a API ou falha de rede.');
-            }
+            setError('Erro ao conectar com a API ou falha de rede.');
         } finally {
             setLoading(false);
         }

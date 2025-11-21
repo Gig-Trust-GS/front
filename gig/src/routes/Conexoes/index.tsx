@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PlusCircle, Trash2, Link as LinkIcon, Zap, Loader2, XCircle } from 'lucide-react';
-import axios from 'axios'; 
+import { PlusCircle, Trash2, Link as LinkIcon, Zap, Loader2, XCircle } from 'lucide-react'; 
 
 const API_BASE_URL = 'https://gig-java.onrender.com/trabalhador'; 
 
