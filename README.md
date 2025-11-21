@@ -1,4 +1,6 @@
-# 🛡️ Gig-Trust: O Passaporte de Carreira (Front-End)<p align="center"><img src="../front/gig/public/gig-trust-logo.png" alt="Logo do Gig-Trust" width="200"/></p>## 1. Título e Descrição
+# 🛡️ Gig-Trust: O Passaporte de Carreira (Front-End)<p align="center"><img src="../front/gig/public/gig-trust-logo.png" alt="Logo do Gig-Trust" width="200"/></p>
+
+## 1. Título e Descrição
 O **Gig-Trust** é uma plataforma inovadora focada no trabalhador da *gig economy* (Uber, iFood, freelancers). Nossa solução usa Inteligência Artificial para transformar dados voláteis de performance e reputação em métricas de confiança (Score de Renda) e desenvolvimento de carreira (Mapa de Competências).
 
 O projeto ataca o desafio "O Futuro do Trabalho", alinhando-se aos ODS 8 (Trabalho Decente) e ODS 10 (Redução das Desigualdades) da ONU.
