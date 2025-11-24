@@ -106,7 +106,7 @@ Os integrantes do grupo **Gig-Trust** são da Turma **1TDSPO**.
 
 A apresentação completa do projeto Front-End, incluindo a demonstração da responsividade, da troca de tema e a aplicação das **Heurísticas de Nielsen** e das práticas de **UX Writing** (requisito da FDE), pode ser visualizada no vídeo:
 
-🔗 **Link do Vídeo de Demonstração (Protótipo):** `[INSIRA O LINK DO VÍDEO NO YOUTUBE/VIMEO AQUI]`
+🔗 **Link do Vídeo de Demonstração (Protótipo):** `[https://youtu.be/fzvCjDjNLcs]`
 
 ---
 
