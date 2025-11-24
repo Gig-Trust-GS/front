@@ -58,7 +58,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 ## 7. Como Usar (URL de Acesso)
 O acesso público e a demonstração final da aplicação Front-End (hospedada no Vercel) deve ser feito através deste link:
 
-🔗 **URL Pública do Front-End (Vercel):** `[INSIRA URL PÚBLICA DO VERCEL AQUI]`
+🔗 **URL Pública do Front-End (Vercel):** `[(https://gig-thust-1p4t3o188-julias-projects-b86df824.vercel.app/)]`
 ---
 ## 8. Estrutura de Pastas
 A organização do código foi feita com base na modularização de rotas e componentes:
